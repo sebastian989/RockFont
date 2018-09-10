@@ -60,10 +60,14 @@ extension UISearchBar {
 extension UINavigationBar {
     open override func awakeFromNib() {
         super.awakeFromNib()
-        let attributes = RockFont.shared.fontAttributedAppearence(size: 16, style: nil)
-        titleTextAttributes = attributes
+        if let font = titleTextAttributes?[NSAttributedStringKey.font] as? UIFont {
+            titleTextAttributes = RockFont.shared.fontAttributedAppearence(font: font)
+        }
+        
         if #available(iOSApplicationExtension 11.0, *) {
-            largeTitleTextAttributes = attributes
+            if let font = largeTitleTextAttributes?[NSAttributedStringKey.font] as? UIFont {
+                largeTitleTextAttributes = RockFont.shared.fontAttributedAppearence(font: font)
+            }
         }
     }
 }

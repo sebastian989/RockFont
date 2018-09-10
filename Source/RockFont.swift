@@ -81,6 +81,13 @@ public class RockFont: NSObject {
         return attributes
     }
     
+    func fontAttributedAppearence(font: UIFont) -> [NSAttributedStringKey : Any]? {
+        let attributes = [
+            NSAttributedStringKey.font: customFor(font),
+        ]
+        return attributes
+    }
+    
     public func applyEasyUITheme(barButtonsSize: CGFloat = 18, tabBatSize: CGFloat = 14) {
         UIBarButtonItem.easyTheme(size: barButtonsSize)
         UITabBarItem.easyTheme(size: tabBatSize)
