@@ -12,9 +12,14 @@ import RockFont
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    override init() {
+        super.init()
+        RockFont.setDefaultFont("Montserrat")
+        RockFont.largeTitlesFontSize = 80
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        RockFont.setDefaultFont("Montserrat")
         print(RockFont.availableFonts(familyName: "Montserrat"))
         return true
     }

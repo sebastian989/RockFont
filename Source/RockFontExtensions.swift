@@ -65,9 +65,11 @@ extension UINavigationBar {
         }
         
         if #available(iOSApplicationExtension 11.0, *) {
-            if let font = largeTitleTextAttributes?[NSAttributedStringKey.font] as? UIFont {
-                largeTitleTextAttributes = RockFont.shared.fontAttributedAppearence(font: font)
-            }
+            let defaultSize = RockFont.shared.largeTitlesFontSize
+            let defaultFont = UIFont.systemFont(ofSize: defaultSize)
+            let font = largeTitleTextAttributes?[NSAttributedStringKey.font] as? UIFont ?? defaultFont
+            let bigFont = UIFont(name: font.fontName, size: defaultSize) ?? defaultFont
+            largeTitleTextAttributes = RockFont.shared.fontAttributedAppearence(font: bigFont)
         }
     }
 }
@@ -83,9 +85,7 @@ extension UITextField {
 extension UITextView {
     open override func awakeFromNib() {
         super.awakeFromNib()
-        guard let currentFont = font else {
-            return
-        }
+        guard let currentFont = font else { return }
         font = RockFont.shared.customFor(currentFont)
     }
 }
@@ -126,3 +126,13 @@ extension UITableViewHeaderFooterView {
     }
 }
 
+extension UISegmentedControl {
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        let font = titleTextAttributes(for: .normal)?[NSAttributedStringKey.font] as? UIFont ?? UIFont.systemFont(ofSize: 16)
+        let attributes = RockFont.shared.fontAttributedAppearence(size: font.pointSize)
+        for state in UIControl.states {
+            UIBarButtonItem.appearance().setTitleTextAttributes(attributes, for: state)
+        }
+    }
+}

@@ -9,6 +9,15 @@
 import UIKit
 
 extension RockFont {
+    public static var largeTitlesFontSize: CGFloat {
+        get {
+            return RockFont.shared.largeTitlesFontSize
+        }
+        set {
+            return RockFont.shared.largeTitlesFontSize = newValue
+        }
+    }
+    
     public static func customFor(_ font: UIFont) -> UIFont {
         return RockFont.shared.customFor(font)
     }

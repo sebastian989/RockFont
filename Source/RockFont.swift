@@ -15,6 +15,8 @@ enum FontDefaultReplacement: String {
 public class RockFont: NSObject {
     public static let shared = RockFont()
     
+    public var largeTitlesFontSize: CGFloat = 30
+    
     private var fontName = ".SFUIDisplay"
     private var defaultStyle: String?
     private var replacements: [FontDefaultReplacement: String] = [:]
