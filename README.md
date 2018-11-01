@@ -48,7 +48,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'RockFont' , '~> 0.0.1'
+    pod 'RockFont' , '~> 0.0.2'
 end
 ```
 
@@ -109,7 +109,7 @@ RockFont.setDefaultFont("Montserrat")
 
 ```
 
-Please keep in the storyboard the system font, It will change all fonts for your expected, but for example is you modify the style, It will change the font with this style 
+Please keep in the storyboard the system font, It will change all fonts for your expected, but for example is you modify the style, It will change the font with this style.
 
 For example if you have in your storyboard `System Semibold 17.0` the result is `Montserrat Semibold 17.0`
 
