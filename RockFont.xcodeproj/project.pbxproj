@@ -11,18 +11,7 @@
 		2B3BAAB8209818E80060F11B /* RockFontStatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BAAB7209818E80060F11B /* RockFontStatic.swift */; };
 		9F9345411E29192300C400F7 /* RockFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F93453C1E29192300C400F7 /* RockFont.swift */; };
 		9F93454B1E291AF800C400F7 /* RockFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F9345471E291A2700C400F7 /* RockFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F9345581E291D4E00C400F7 /* RockFont.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69F1B5741D955990000A2B87 /* RockFont.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		9F9345591E291D4E00C400F7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 69F1B56B1D955990000A2B87 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 69F1B5731D955990000A2B87;
-			remoteInfo = RockFont;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2B03105620957C8E0090B5EC /* RockFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RockFontExtensions.swift; sourceTree = "<group>"; };
@@ -31,7 +20,6 @@
 		9F93453C1E29192300C400F7 /* RockFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RockFont.swift; sourceTree = "<group>"; };
 		9F9345471E291A2700C400F7 /* RockFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RockFont.h; sourceTree = "<group>"; };
 		9F9345481E291A2700C400F7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F9345531E291D4E00C400F7 /* RockFontTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RockFontTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F989F421E2B34E700A19F67 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,14 +28,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9F9345501E291D4E00C400F7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9F9345581E291D4E00C400F7 /* RockFont.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				69F1B5741D955990000A2B87 /* RockFont.framework */,
-				9F9345531E291D4E00C400F7 /* RockFontTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,24 +119,6 @@
 			productReference = 69F1B5741D955990000A2B87 /* RockFont.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9F9345521E291D4E00C400F7 /* RockFontTest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9F93455B1E291D4E00C400F7 /* Build configuration list for PBXNativeTarget "RockFontTest" */;
-			buildPhases = (
-				9F93454F1E291D4E00C400F7 /* Sources */,
-				9F9345501E291D4E00C400F7 /* Frameworks */,
-				9F9345511E291D4E00C400F7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9F93455A1E291D4E00C400F7 /* PBXTargetDependency */,
-			);
-			name = RockFontTest;
-			productName = RockFontTests;
-			productReference = 9F9345531E291D4E00C400F7 /* RockFontTest.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,11 +131,6 @@
 				TargetAttributes = {
 					69F1B5731D955990000A2B87 = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0900;
-						ProvisioningStyle = Manual;
-					};
-					9F9345521E291D4E00C400F7 = {
-						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
 					};
@@ -193,20 +149,12 @@
 			projectRoot = "";
 			targets = (
 				69F1B5731D955990000A2B87 /* RockFont */,
-				9F9345521E291D4E00C400F7 /* RockFontTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		69F1B5721D955990000A2B87 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9F9345511E291D4E00C400F7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -226,22 +174,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9F93454F1E291D4E00C400F7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9F93455A1E291D4E00C400F7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 69F1B5731D955990000A2B87 /* RockFont */;
-			targetProxy = 9F9345591E291D4E00C400F7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		69F1B5861D955990000A2B87 /* Debug */ = {
@@ -426,46 +359,6 @@
 			};
 			name = Release;
 		};
-		9F93455C1E291D4E00C400F7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Tests/Info.plist;
-				INFOPLIST_PREPROCESS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LOCALIZED_STRING_MACRO_NAMES = (
-					NSRockFontString,
-					CFRockFontString,
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andresilvagomez.RockFontTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		9F93455D1E291D4E00C400F7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Tests/Info.plist;
-				INFOPLIST_PREPROCESS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LOCALIZED_STRING_MACRO_NAMES = (
-					NSRockFontString,
-					CFRockFontString,
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.andresilvagomez.RockFontTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -483,15 +376,6 @@
 			buildConfigurations = (
 				69F1B5891D955990000A2B87 /* Debug */,
 				69F1B58A1D955990000A2B87 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9F93455B1E291D4E00C400F7 /* Build configuration list for PBXNativeTarget "RockFontTest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9F93455C1E291D4E00C400F7 /* Debug */,
-				9F93455D1E291D4E00C400F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
